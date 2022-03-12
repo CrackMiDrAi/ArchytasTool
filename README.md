@@ -1,5 +1,5 @@
 # Archytas Tool
-### <font color="red">我们强烈抵制闲鱼平台上未经授权的刷机服务！</font>
+### 我们强烈抵制闲鱼平台上未经授权的刷机服务！
 
 A cracking tool of Xiaomi Dr Ai (Archytas / Archimedes).<br>
 一个小米小爱老师的破解工具。
