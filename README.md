@@ -1,6 +1,6 @@
 # Archytas Tool
 ### 我们强烈抵制闲鱼平台上未经授权的刷机服务！
-
+我对之前在程序中为防止违规刷机服务添加格机代码的事情感到抱歉，并在此将程序开源。<br>
 A cracking tool of Xiaomi Dr Ai (Archytas / Archimedes).<br>
 一个小米小爱老师的破解工具。
 
