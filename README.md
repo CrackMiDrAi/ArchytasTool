@@ -15,4 +15,4 @@ A cracking tool of Xiaomi Dr Ai (Archytas / Archimedes).<br>
 - Flash Magisk with Adb Sideload 使用 Adb Sideload 刷入 Magisk<br>
 - Install apps as system app 将应用安装为系统应用<br>
 - Uninstall system apps 卸载系统应用<br>
-- Push files to devices 推送文件至设备
+- Push files to the device 推送文件至设备
