@@ -1,6 +1,5 @@
 import os
 import sys
-import urllib.request
 
 def adv():
     choiceadv = input("A.安装自定义应用为系统应用（priv-app）\nB.安装自定义应用为系统应用（app）\nC.卸载系统应用（priv-app）\nD.卸载系统应用（app）\nE.推送指定文件到 /sdcard（内部储存根目录）\n------------------------\n请输入序号（不区分大小写，可多选）：")
@@ -48,23 +47,6 @@ def doAgain():
     elif doAgainChoice != "n":
         print("输入错误！")
         doAgain()
-
-def checkPswd():
-    pswdInput = input("请输入验证码：")
-    print ("验证中...")
-    response =  urllib.request.urlopen("http://116.62.68.105/Ao1HB2P9eY.html")    
-    pswd = response.read()
-    pswd = pswd.decode("utf-8")
-    if pswd[0] == "0":
-        print ("本程序已停用")
-        os.system("pause")
-        sys.exit()
-
-    if pswdInput == pswd:
-        print("验证通过！")
-    else:
-        print("输入错误！\n")
-        checkPswd()
 
 def Store():
     print("正在替换应用商店..")
@@ -124,9 +106,7 @@ def flashMagisk():
     print("完成\n")
 
 print ("Tool by @rpone\n------------------------")
-print ("为防止违规代刷，请在 Telegram @CrackMiDrAi 获取验证码")
-checkPswd()
-print ("------------------------\n请在关机后按住 电源键+复读键+红键+音量上键 以进入 TWRP Recovery 并挂载 System 分区")
+print ("请在关机后按住 电源键+复读键+红键+音量上键 以进入 TWRP Recovery 并挂载 System 分区")
 print ("检查连接状态...\n------------------------\n")
 os.system("adb devices")
 print ("------------------------")
