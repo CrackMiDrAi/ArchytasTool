@@ -17,6 +17,10 @@ A cracking tool of Xiaomi Dr AI (Archytas / Archimedes).<br>
 - Uninstall system apps 卸载系统应用<br>
 - Push files to the device 推送文件至设备
 
+## How to Use 如何使用？
+Run main.py and follow the prompts.<br>
+运行 main.py，按照提示操作。
+
 ## About Us 关于
 - [Crack Mi Dr AI Team](https://midrai.cn)
 - [BBS 论坛](https://bbs.midrai.cn)
