@@ -19,4 +19,4 @@ A cracking tool of Xiaomi Dr AI (Archytas / Archimedes).<br>
 
 ## About Us 关于
 - [Crack Mi Dr AI Team](https://midrai.cn)
-- [论坛 BBS](https://bbs.midrai.cn)
+- [BBS 论坛](https://bbs.midrai.cn)
