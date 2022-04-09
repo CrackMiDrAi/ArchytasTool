@@ -113,11 +113,31 @@ def flashMagisk():
     os.system("adb sideload files/Magisk-Canary-23016.zip")
     print("完成\n")
 
-
 print ("Tool by @rpone\n------------------------")
+
+if not os.path.exists("adb.exe"):
+    print("请解压后运行！\n------------------------")
+    os.system("pause")
+    sys.exit()
+
 print ("请在关机后按住 电源键+复读键+红键+音量上键 以进入 TWRP Recovery 并挂载 System 分区")
 print ("检查连接状态...\n------------------------\n")
-os.system("adb devices")
+f = os.popen(r"adb devices", "r")
+output = f.read()
+f.close()
+s = output.split("\n")
+new = [x for x in s if x != ''] 
+devices = []
+for i in new:
+    dev = i.split('\tdevice')
+    if len(dev)>=2:
+        devices.append(dev[0])
+if not devices:
+    print("设备未连接！\n\n------------------------")
+    os.system("pause")
+    sys.exit()
+else:
+    print("当前连接设备:%s"%str(devices)+"\n")
 print ("------------------------")
 
 def main():
