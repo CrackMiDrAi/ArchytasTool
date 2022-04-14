@@ -1,6 +1,5 @@
-import os
-import sys
-
+import os, sys, urllib.request, webbrowser
+localVer = 3.9
 def adv():
     global choiceadv
     choiceadv = input("A.安装自定义应用为系统应用（priv-app）\nB.安装自定义应用为系统应用（app）\nC.卸载系统应用（priv-app）\nD.卸载系统应用（app）\nE.推送指定文件到 /sdcard（内部储存根目录）\n0.返回主页\n------------------------\n请输入序号（不区分大小写，可多选）：")
@@ -51,7 +50,10 @@ def doAgain(mode):
         else:
             main()
     elif doAgainChoice == "n":
-        main()
+        if mode == 0:
+            main()
+        else:
+            return 0
     else:
         print("输入错误！")
         doAgain(mode)
@@ -129,7 +131,7 @@ s = output.split("\n")
 new = [x for x in s if x != ''] 
 devices = []
 for i in new:
-    dev = i.split('\tdevice')
+    dev = i.split('\trecovery')
     if len(dev)>=2:
         devices.append(dev[0])
 if not devices:
@@ -141,15 +143,25 @@ else:
 print ("------------------------")
 
 def main():
-    choice = input("A.替换应用商店（可防止第三方 app 被删除，由 @xluzo 修改）\nB.关闭系统更新\nC.启用系统更新\nD.安装原生软件包安装程序（可直接安装第三方 app）\nE.安装旧版设置（支持开发者选项）\nF.关闭 lowram 模式（可获取通知使用权、修改堆叠后台）\nG.卸载默认桌面（请确定已安装可使用的第三方桌面）\nH.恢复默认桌面并启用负一屏\nI.安装 Via 浏览器\nJ.启用壁纸服务（不稳定且有变砖风险，可使用第三方启动器）\nK.刷入 Magisk\n0.一键执行首次破解的推荐操作\n1.高级选项\n2.退出程序\n------------------------\n请输入序号（不区分大小写，可多选）：")
+    advUsed = 0
+    choice = input("A.替换应用商店（可防止第三方 app 被删除，由 @xluzo 修改）\nB.关闭系统更新\nC.启用系统更新\nD.安装原生软件包安装程序（可直接安装第三方 app）\nE.安装旧版设置（支持开发者选项）\nF.关闭 lowram 模式（可获取通知使用权、修改堆叠后台）\nG.卸载默认桌面（请确定已安装可使用的第三方桌面）\nH.恢复默认桌面并启用负一屏\nI.安装 Via 浏览器\nJ.启用壁纸服务（不稳定且有变砖风险，可使用第三方启动器）\nK.刷入 Magisk\n0.一键执行首次破解的推荐操作\n1.高级选项\n2.退出程序\n3.检查更新\n------------------------\n请输入序号（不区分大小写，可多选）：")
     choice = choice.lower()
     print ("------------------------")
 
     if "2" in choice:
         return 0
+    if "3" in choice:
+        choice = "3"
+        ver = float(urllib.request.urlopen("https://rponeawa.github.io/ArchytasToolVer/ver").read().decode("utf-8"))
+        if localVer < ver:
+            input ("检查到新版本，回车以前往下载...")
+            webbrowser.open_new("https://github.com/CrackMiDrAi/ArchytasTool/releases")
+        else:
+            print ("您使用的是最新版本！")
     if "1" in choice:
         print ("高级选项（不建议小白使用，变砖不负责）")
         adv()
+        advUsed = 1
         if "0" not in choiceadv:
             doAgain(0)
     if "0" in choice:
@@ -178,8 +190,11 @@ def main():
     if "k" in choice:
         flashMagisk()
     print ("------------------------")
-    if "0" in choiceadv:
-        main()
+    if advUsed == 1:
+        if "0" in choiceadv:
+            main()
+        else:
+            doAgain(1)
     else:
         doAgain(1)
 
