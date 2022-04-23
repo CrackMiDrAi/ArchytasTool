@@ -8,12 +8,12 @@ def adv():
     if "a" in choiceadv:
         print("\n安装自定义应用为系统应用（priv-app）")
         apkpath = input("请拖入需要安装的 apk：")
-        os.system("adb push " + apkpath + "/system/priv-app")
+        os.system("adb push " + apkpath + " /system/priv-app")
 
     if "b" in choiceadv:
         print("\n安装自定义应用为系统应用（app）")
         apkpath = input("请拖入需要安装的 apk：")
-        os.system("adb push " + apkpath + "/system/app")
+        os.system("adb push " + apkpath + " /system/app")
 
     if "c" in choiceadv:
         print("\n卸载系统应用（priv-app）")
