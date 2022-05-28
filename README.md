@@ -2,7 +2,7 @@
 **我们强烈抵制闲鱼平台上未经授权的刷机服务！**<br>
 **我**对**本人**之前在程序中为防止违规刷机服务添加未生效的格机代码感到抱歉，在此声明此过激行为与 Crack Mi Dr AI Team 无关，并将程序开源。<br><br>
 A cracking tool of Xiaomi Dr AI (Archytas / Archimedes).<br>
-一个小米小爱老师的破解工具。
+一个小米小爱老师的破解工具。<br>
 Now you can try the [Gui Version](https://github.com/CrackMiDrAi/ArchytasToolGui).
 
 ## Functions 功能
