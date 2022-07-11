@@ -1,0 +1,1 @@
+pyinstaller -F main.py -i 1.ico --add-data "Background.png;./"

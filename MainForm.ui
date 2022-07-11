@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainUI</class>
+ <widget class="QMainWindow" name="MainUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Archytas_tool</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="closebtn">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>30</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background:#CE0000;
+    color:white;
+    font-size:16px;border-radius: 8px;
+}
+QPushButton:hover{
+    background:#FF2D2D;
+}
+QPushButton:pressed{
+    border: 1px solid #3C3C3C!important;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="minisize">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>30</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background:#6C6C6C;
+    color:white;
+    font-size:16px;border-radius: 8px;
+}
+QPushButton:hover{
+    background:#9D9D9D;
+}
+QPushButton:pressed{
+    border: 1px solid #3C3C3C!important;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-50</y>
+      <width>641</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="RC.qrc">:/res/Background.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>替换应用商店</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>140</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>启用系统更新</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_3">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>100</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>禁用系统更新</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_4">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>180</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>安装原生软件包安装程序</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_5">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>220</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>替换 build.prop</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_6">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>260</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>安装系统桌面/启用负一屏</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_7">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>300</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>安装 Via 浏览器</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_8">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>340</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>刷入 Magisk</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>80</y>
+      <width>211</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 2px solid rgb(163, 140, 255);
+	border-radius: 5px;	
+	background-color:rgb(163, 140, 255);
+	color:gray;
+	font:44px &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+	background-color: rgb(163, 140, 247);
+	border: 2px solid rgb(163, 140, 247);
+}
+QPushButton:pressed {	
+	background-color: rgb(163, 140, 238);
+	border: 2px solid rgb(163, 140, 238);
+}</string>
+    </property>
+    <property name="text">
+     <string>启动
+START</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_9">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>380</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	padding:2px;
+	font:16px &quot;Microsoft YaHei&quot;;
+}
+QCheckBox:hover {
+	border:1px solid rgb(255,150,60);
+	border-radius:4px;
+	padding: 1px;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(190, 90, 50, 50), stop:1 rgba(250, 130, 40, 50));
+}
+QCheckBox::indicator:checked {
+	border:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(246, 134, 86)
+}
+QCheckBox::indicator:unchecked {
+	border-width:1px solid rgb(246, 134, 86);
+	border-radius:4px;
+  	background-color:rgb(255,255,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>卸载系统桌面</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>closebtn</zorder>
+   <zorder>minisize</zorder>
+   <zorder>checkBox</zorder>
+   <zorder>checkBox_2</zorder>
+   <zorder>checkBox_3</zorder>
+   <zorder>checkBox_4</zorder>
+   <zorder>checkBox_5</zorder>
+   <zorder>checkBox_6</zorder>
+   <zorder>checkBox_7</zorder>
+   <zorder>checkBox_8</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>checkBox_9</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="RC.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closebtn</sender>
+   <signal>clicked()</signal>
+   <receiver>centralwidget</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>377</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minisize</sender>
+   <signal>clicked()</signal>
+   <receiver>centralwidget</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>slot1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>996</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>chooseparser()</slot>
+  <slot>urlcheck()</slot>
+  <slot>dumper()</slot>
+  <slot>dork()</slot>
+  <slot>slot1()</slot>
+ </slots>
+</ui>

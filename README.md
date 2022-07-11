@@ -3,7 +3,7 @@
 **我**对**本人**之前在程序中为防止违规刷机服务添加未生效的格机代码感到抱歉，在此声明此过激行为与 Crack Mi Dr AI Team 无关，并将程序开源。<br><br>
 A cracking tool of Xiaomi Dr AI (Archytas / Archimedes).<br>
 一个小米小爱老师的破解工具。<br>
-Now you can try the [Gui Version](https://github.com/CrackMiDrAi/ArchytasToolGui).
+Now the GUI Version merge to this repo
 
 ## Functions 功能
 - Replace the built-in app store 替换内置应用商店<br>
@@ -21,6 +21,7 @@ Now you can try the [Gui Version](https://github.com/CrackMiDrAi/ArchytasToolGui
 ## How to Use 如何使用？
 Run main.py and follow the prompts.<br>
 运行 main.py，按照提示操作。
+##Or you can also use a compiled executable program
 
 ## About Us 关于
 - [Crack Mi Dr AI Team](https://midrai.cn)
