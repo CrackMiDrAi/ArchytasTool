@@ -110,8 +110,11 @@ def enableWallpaper():
     print("完成\n")
 
 def flashMagisk():
-    input ("请进入 高级 -> Adb Sideload -> 滑动滑块，完成后回车...")
-    print("正在刷入...")
+    print("切换至ADB Sideload模式")
+    os.system('adb shell twrp sideload')
+    print('等待ADB Sideload设备')
+    os.system('adb wait-for-sideload')
+    print('正在刷入Magisk...')
     os.system("adb sideload files/Magisk-Canary-23016.zip")
     print("完成\n")
 
@@ -121,26 +124,32 @@ if not os.path.exists("adb.exe"):
     print("请解压后运行！\n------------------------")
     os.system("pause")
     sys.exit()
-
-print ("请在关机后按住 电源键+复读键+红键+音量上键 以进入 TWRP Recovery 并挂载 System 分区")
-print ("检查连接状态...\n------------------------\n")
-f = os.popen(r"adb devices", "r")
-output = f.read()
-f.close()
-s = output.split("\n")
-new = [x for x in s if x != ''] 
-devices = []
-for i in new:
-    dev = i.split('\trecovery')
-    if len(dev)>=2:
-        devices.append(dev[0])
-if not devices:
-    print("设备未连接！\n\n------------------------")
-    os.system("pause")
-    sys.exit()
-else:
-    print("当前连接设备:%s"%str(devices)+"\n")
-print ("------------------------")
+print("请在关机后按住 电源键+复读键+红键+音量上键 以进入 TWRP Recovery 并挂载 System 分区")
+while True:
+    print("等待设备连接...")
+    os.system('adb wait-for-recovery-device')
+    print('已检测到设备')
+    print("检查连接状态...\n------------------------\n")
+    f = os.popen(r"adb devices", "r")
+    output = f.read()
+    f.close()
+    s = output.split("\n")
+    new = [x for x in s if x != ''] 
+    devices = []
+    for i in new:
+        dev = i.split('\trecovery')
+        if len(dev)>=2:
+            devices.append(dev[0])
+    if not devices:
+        print("你的设备似乎并不在Recovery模式")
+        print('尝试进入Recovery模式...')
+        os.system('adb reboot recovery')
+        print('\n------------------------')
+        continue
+    else:
+        print("当前连接设备:%s"%str(devices)+"\n")
+    print ("------------------------")
+    break
 
 def main():
     advUsed = 0
