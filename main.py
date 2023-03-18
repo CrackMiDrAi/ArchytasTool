@@ -152,6 +152,7 @@ while True:
     break
 
 def main():
+    os.system("adb kill-server")
     advUsed = 0
     choice = input("A.替换应用商店（可防止第三方 app 被删除，由 @xluzo 修改）\nB.关闭系统更新\nC.启用系统更新\nD.安装原生软件包安装程序（可直接安装第三方 app）\nE.安装旧版设置（支持开发者选项）\nF.关闭 lowram 模式（可获取通知使用权、修改堆叠后台）\nG.卸载默认桌面（请确定已安装可使用的第三方桌面）\nH.恢复默认桌面并启用负一屏\nI.安装 Via 浏览器\nJ.启用壁纸服务（不稳定且有变砖风险，可使用第三方启动器）\nK.刷入 Magisk\n0.一键执行首次破解的推荐操作\n1.高级选项\n2.退出程序\n3.检查更新\n------------------------\n请输入序号（不区分大小写，可多选）：")
     choice = choice.lower()
